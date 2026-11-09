@@ -1,0 +1,4 @@
+{
+  "note": "Upload the files, fill their public HTTPS URLs, then activate with scripts/activate-blogger-images.mjs. Empty URLs are never emitted into posts.",
+  "images": []
+}

@@ -1,0 +1,15 @@
+import React from 'react';
+import {renderToStaticMarkup} from 'react-dom/server';
+import fragments from '../blogger/source/fragments.json';
+import CodeBlock from '../blogger/source/components/blog/CodeBlock';
+import CalloutBlock from '../blogger/source/components/blog/CalloutBlock';
+import ImageBlock from '../blogger/source/components/blog/ImageBlock';
+export const {hero,footer,sidebar,icons,share} = fragments;
+export const posts = [];
+export const pages = [];
+export const readingTimes = {};
+export const postSEO = post => ({title:post.title, description:post.searchDescription || post.excerpt, keywords:post.seoKeywords || []});
+export const renderRelated = () => '';
+export const renderCode = block => renderToStaticMarkup(<CodeBlock language={block.language} code={block.code}/>);
+export const renderCallout = block => renderToStaticMarkup(<CalloutBlock variant={block.variant} text={block.text}/>);
+export const renderImage = block => renderToStaticMarkup(<ImageBlock {...block}/>);

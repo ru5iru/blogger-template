@@ -1,0 +1,9 @@
+# Optional Blogger Settings > Crawlers and indexing > Custom robots.txt
+# Review before saving; this allows public content to be crawled.
+User-agent: *
+Disallow: /search
+Disallow: /share-widget
+Allow: /
+
+Sitemap: https://your-blog.blogspot.com/sitemap.xml
+Sitemap: https://your-blog.blogspot.com/sitemap-pages.xml
